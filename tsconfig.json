@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "incremental": true, // Enables incremental compilation for faster rebuilds
+    "jsx": "react-jsx", // Uses the new JSX transform for React (React 17+)
+    "target": "es2022", // Specifies ECMAScript target version; supports modern JavaScript features
+    "module": "commonjs", // Use CommonJS module system (required for Node.js and Electron main processes)
+    "strict": true, // Enables all strict type-checking options for TypeScript
+    "sourceMap": true, // Generates source maps for easier debugging in development
+    "outDir": "dist", // Directory to output compiled JavaScript files
+    "moduleResolution": "node", // Use Node.js-style module resolution (important for imports)
+    "esModuleInterop": true, // Provides better compatibility for ES modules and CommonJS
+    "allowSyntheticDefaultImports": true // Allows default imports even if the module lacks a default export
+  },
+  "include": [
+    "src/**/*" // Include all files in the `src` directory and its subdirectories
+  ],
+  "exclude": [
+    "node_modules", // Exclude `node_modules` to avoid processing external libraries
+    "dist" // Exclude the `dist` folder to prevent compiled files from being recompiled
+  ]
+}

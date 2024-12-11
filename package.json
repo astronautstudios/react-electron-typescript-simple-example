@@ -1,0 +1,50 @@
+{
+  "name": "react-electron-typescript-simple-example",
+  "version": "1.0.0",
+  "description": "react-electron-typescript-simple-example",
+  "keywords": [
+    "electron",
+    "react",
+    "typescript",
+    "ts",
+    "webpack"
+  ],
+  "main": "./dist/main.bundle.js",
+  "scripts": {
+    "build:main": "webpack --config webpack.main.config.ts",
+    "build:renderer": "webpack --config webpack.renderer.config.ts",
+    "react-start": "webpack serve --config webpack.renderer.config.ts --mode development",
+    "build": "npm run build:main && npm run build:renderer",
+    "start": "npm run build && electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astronautstudios/react-electron-typescript-simple-example.git"
+  },
+  "author": "Astronaut Studios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/astronautstudios/react-electron-typescript-simple-example/issues"
+  },
+  "homepage": "https://github.com/astronautstudios/react-electron-typescript-simple-example#readme",
+  "devDependencies": {
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "cross-env": "^7.0.3",
+    "ejs-loader": "^0.5.0",
+    "electron": "^33.2.1",
+    "html-webpack-plugin": "^5.6.3",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
